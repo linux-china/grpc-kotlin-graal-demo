@@ -6,6 +6,16 @@ gRPC Kotlin Graal demo
 * Use `protobuf-javalite` and `grpc-kotlin-stub-lite` version
 * Reflection for Protobuf messages in `src/graal/reflect-config.json` 
 
+# How to test?
+
+* Start gRPC Server from https://github.com/linux-china/grpc-kotlin-demo
+* build native and test: 
+
+```
+$ ./gradlew -x test nativeImage
+$ ./build/graal/hello-world
+```
+
 # References
 
 * gRPC-Kotlin: https://github.com/grpc/grpc-kotlin
