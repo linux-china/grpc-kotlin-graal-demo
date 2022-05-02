@@ -23,3 +23,4 @@ $ ./build/graal/hello-world
 * Protobuf Plugin for Gradle: https://github.com/google/protobuf-gradle-plugin
 * Building Command Line Applications with GraalVM Enterprise Native Image: https://www.youtube.com/watch?v=7QCL7UgjTW4
 * UPX: the Ultimate Packer for eXecutables: https://github.com/upx/upx
+* Gradle plugin for GraalVM Native Image building: https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html 
