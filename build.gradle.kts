@@ -1,4 +1,5 @@
 import com.google.protobuf.gradle.*
+import org.junit.jupiter.api.Named.named
 
 val javaVersion = "17"
 val protobufVersion = "3.20.1"
@@ -10,6 +11,7 @@ plugins {
     id("com.google.protobuf") version "0.8.18"
     java
     application
+    id("org.graalvm.buildtools.native") version "0.9.11"
 }
 
 repositories {
@@ -99,4 +101,15 @@ protobuf {
         }
     }
 }
+
+graalvmNative {
+    toolchainDetection.set(false)
+    binaries {
+        named("main") {
+            imageName.set("grpc-kotlin-demo") // The name of the native image, defaults to the project name
+            mainClass.set("io.grpc.examples.helloworld.HelloWorldClientKt")
+        }
+    }
+}
+
 
